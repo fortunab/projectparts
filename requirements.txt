@@ -1,0 +1,10 @@
+substrafl
+numpy
+pandas
+fedbiomed
+fedbiomed-cli
+scikit-learn
+tensorflow
+torchvision
+metisfl
+flwr
