@@ -9,13 +9,6 @@ from fedbiomed.researcher.requests.model_request import ModelRequest
 
 env = FedBioMedResearcherEnv()
 
-def load_colorectal_polyps_data():
-    train_images = np.random.rand(100, 224, 224, 3)
-    train_labels = np.random.randint(0, 2, 100)
-    test_images = np.random.rand(30, 224, 224, 3)
-    test_labels = np.random.randint(0, 2, 30)
-    return train_images, train_labels, test_images, test_labels
-
 def create_model():
     base_model = tf.keras.applications.ResNet50(weights="imagenet", include_top=False, input_shape=(224, 224, 3))
     x = tf.keras.layers.Flatten()(base_model.output)
