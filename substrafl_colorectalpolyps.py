@@ -11,6 +11,7 @@ import torchvision.models as models
 import torchvision.transforms as transforms
 from torch.utils.data import DataLoader, Dataset
 
+
 class ColorectalDataset(Dataset):
     def __init__(self, images, labels, transform=None):
         self.images = images
