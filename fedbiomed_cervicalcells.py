@@ -12,11 +12,6 @@ from fedbiomed.researcher.model_manager import TensorFlowModelManager
 from fedbiomed.common.messaging import ModelTrainingArgs
 
 
-def load_cervical_cell_data():
-    images = np.random.rand(500, 64, 64, 3)
-    labels = np.random.randint(0, 2, 500)
-    return images, labels
-
 def get_model(model_name, input_shape=(64, 64, 3)):
     if model_name == "resnet":
         base_model = ResNet50(weights="imagenet", include_top=False, input_shape=(224, 224, 3))
