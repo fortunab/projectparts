@@ -10,10 +10,6 @@ from metisfl.client.client import Client
 from metisfl.server.server import Server
 from metisfl.common.dtypes import DatasetSplit
 
-def load_cervical_cell_data():
-    images = np.random.rand(500, 64, 64, 3)
-    labels = np.random.randint(0, 2, 500)
-    return images, labels
 
 def get_model(model_name, input_shape=(64, 64, 3)):
     if model_name == "resnet":
