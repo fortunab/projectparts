@@ -5,7 +5,7 @@ from flwr.server import start_server
 from flwr.client import start_client, NumPyClient
 from flwr.common import ndarrays_to_parameters
 from typing import Tuple
-
+ 
 def create_model():
     base_model = tf.keras.applications.ResNet50(weights="imagenet", include_top=False, input_shape=(224, 224, 3))
     x = tf.keras.layers.Flatten()(base_model.output)
