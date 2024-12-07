@@ -10,10 +10,6 @@ from substrafl.nodes import TrainDataNode, TestDataNode, AggregationNode
 from substrafl.strategies import FedAvg
 from substrafl.algorithms import TensorFlowFLAlgorithm
 
-def load_cervical_cell_data():
-    images = np.random.rand(500, 64, 64, 3)
-    labels = np.random.randint(0, 2, 500)
-    return images, labels
 
 def get_model(model_name, input_shape=(64, 64, 3)):
     if model_name == "resnet":
