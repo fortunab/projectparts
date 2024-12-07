@@ -9,13 +9,6 @@ from tensorflow.keras.layers import Dense, Flatten, Conv2D, MaxPooling2D
 from tensorflow.keras.applications import ResNet50, AlexNet
 
 
-def load_colorectal_polyps_data():
-    train_images = np.random.rand(100, 224, 224, 3)
-    train_labels = np.random.randint(0, 2, 100)
-    test_images = np.random.rand(30, 224, 224, 3)
-    test_labels = np.random.randint(0, 2, 30)
-    return train_images, train_labels, test_images, test_labels
-
 def get_model(model_name):
     if model_name == "resnet":
         base_model = ResNet50(weights='imagenet', include_top=False, input_shape=(224, 224, 3))
